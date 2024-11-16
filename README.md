@@ -28,11 +28,36 @@ This project is a static website that shows the next spawn time for a Diablo 4 w
    - Go to Pages
    - Create a new project
    - Connect your GitHub repository
-   - Configure the build settings:
-     - Build command: (leave empty)
-     - Build output directory: /
+   - Configure the build settings as shown below
+
+## Build Settings
+
+Since this is a static HTML site, use these Cloudflare Pages settings:
+
+### Basic Build Settings
+- Build command: (leave empty)
+- Build output directory: `/`
+- Root directory: (leave empty)
+
+### Environment Variables
+No environment variables are needed for this static site.
+
+### Framework Preset
+- None (vanilla HTML/CSS/JavaScript)
 
 Your site will be deployed automatically and will be available at a `.pages.dev` domain.
+
+### Troubleshooting Deployment
+
+If you can't access your site after deployment:
+
+1. Wait 1-5 minutes for DNS propagation
+2. Check the Cloudflare Pages dashboard for:
+   - The correct project URL
+   - Deployment status (should show "Success")
+3. If using a custom domain, ensure DNS records are properly configured
+4. Clear your browser cache or try in an incognito window
+5. If issues persist, check the Cloudflare Pages deployment logs
 
 ### Usage
 
