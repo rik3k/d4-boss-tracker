@@ -17,14 +17,29 @@ async function handleRequest(request) {
     nextSpawnTime = nextSpawnTime.add(spawnInterval, 'milliseconds')
   }
 
-  // Return the next spawn time in JSON format
-  const response = {
-    nextSpawnTime: nextSpawnTime.toISOString()
+  // Create the JSON response
+  const jsonData = {
+    next_spawn_time: nextSpawnTime.format()
   }
 
-  return new Response(JSON.stringify(response), {
+  // Create HTML with embedded JSON
+  const html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diablo 4 Boss Tracker</title>
+</head>
+<body>
+    ${JSON.stringify(jsonData, null, 4)}
+</body>
+</html>
+  `.trim()
+
+  return new Response(html, {
     headers: { 
-      'content-type': 'application/json',
+      'content-type': 'text/html',
       'Access-Control-Allow-Origin': '*'
     }
   })

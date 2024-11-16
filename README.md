@@ -1,18 +1,18 @@
 # Diablo 4 Boss Tracker API
 
-This project provides a JSON API that returns the next spawn time for a Diablo 4 world boss. The world boss spawns every 3.5 hours, with the initial spawn time set to November 14, 2024, at 10:30 PM New York time.
+This project provides an HTML page that displays the next spawn time for a Diablo 4 world boss in JSON format. The world boss spawns every 3.5 hours, with the initial spawn time set to November 14, 2024, at 10:30 PM New York time.
 
-## API Usage
+## Usage
 
-Once deployed, you can fetch the next spawn time by making a GET request to:
+Once deployed, you can view the next spawn time by visiting:
 ```
 https://your-project.pages.dev/api/spawn
 ```
 
-The API returns JSON in this format:
+The page will display JSON in this format:
 ```json
 {
-  "nextSpawnTime": "2024-11-14T22:30:00-05:00"
+    "next_spawn_time": "2024-11-14T22:30:00-05:00"
 }
 ```
 
