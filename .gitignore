@@ -1,14 +1,7 @@
-# Node.js dependencies
-node_modules/
+# Editor files
+.DS_Store
+.vscode/
+.idea/
 
 # Logs
-logs/
 *.log
-npm-debug.log*
-
-# Cloudflare Wrangler build files
-dist/
-worker/
-
-# Wrangler configuration
-.wrangler/
